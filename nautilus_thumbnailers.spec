@@ -7,7 +7,7 @@ Release: %mkrel %rel
 License: GPL
 Group: File tools
 Source: http://www.flyn.org/projects/nautilus_thumbnailers/%name.tar.bz2
-Patch: nautilus_thumbnailers-0.0.3-with-gimp-2.3.patch.bz2
+Patch: nautilus_thumbnailers-0.0.3-with-gimp-2.3.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-root
 URL: http://www.flyn.org/projects/nautilus_thumbnailers/index.html
 BuildArch: noarch
@@ -43,12 +43,10 @@ rm -rf %buildroot
 rm -rf $RPM_BUILD_ROOT
 
 %post
-GCONF_CONFIG_SOURCE=`gconftool-2 --get-default-source` gconftool-2 --makefile-install-rule %{_sysconfdir}/gconf/schemas/thumbnailer.schemas > /dev/null
+%post_install_gconf_schemas thumbnailer
 
 %preun
-if [ "$1" = "0" ] ; then
-GCONF_CONFIG_SOURCE=`gconftool-2 --get-default-source` gconftool-2 --makefile-uninstall-rule %{_sysconfdir}/gconf/schemas/thumbnailer.schemas > /dev/null
-fi
+%preun_uninstall_gconf_schemas thumbnailer
 
 %files
 %defattr(-, root, root)
@@ -59,4 +57,4 @@ fi
 %{_bindir}/gimp-thumbnailer
 %{_bindir}/gs-thumbnailer
 %{_bindir}/vfstofs
-%{_mandir}//man1/nautilus_thumbnailers.1.bz2
+%{_mandir}//man1/nautilus_thumbnailers.1*
