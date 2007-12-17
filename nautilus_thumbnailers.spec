@@ -8,7 +8,6 @@ License: GPL
 Group: File tools
 Source: http://www.flyn.org/projects/nautilus_thumbnailers/%name.tar.bz2
 Patch: nautilus_thumbnailers-0.0.3-with-gimp-2.3.patch
-BuildRoot: %{_tmppath}/%{name}-%{version}-root
 URL: http://www.flyn.org/projects/nautilus_thumbnailers/index.html
 BuildArch: noarch
 Requires: nautilus
