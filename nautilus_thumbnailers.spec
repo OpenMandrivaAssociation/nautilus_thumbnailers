@@ -1,4 +1,4 @@
-%define rel 7
+%define rel 8
 
 Summary: A collection of scripts that create thumbnails for files
 Name: nautilus_thumbnailers
