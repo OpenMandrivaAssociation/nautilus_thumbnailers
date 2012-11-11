@@ -1,0 +1,8 @@
+--- nautilus_thumbnailers-0.0.3/scripts/gimp-thumbnailer.gimp	2003-07-31 00:04:17.000000000 +0200
++++ nautilus_thumbnailers-0.0.3/scripts/gimp-thumbnailer	2004-12-07 10:34:19.356523787 +0100
+@@ -61,4 +61,4 @@
+ # /usr/bin/gimp --no-data --no-interface --batch '(let* ((img (car (gimp-file-load 1 "'"`vfstofs -u "$IN"`"'" "'"`vfstofs -u "$IN"`"'")))) (gimp-file-save-thumbnail img "'"`vfstofs -u "$IN"`"'"))' '(gimp-quit 0)'
+ 
+ # This works.  Nautilus does the scaling for us.
+-/usr/bin/gimp --no-data --no-interface --batch '(let* ((img (car (gimp-file-load 1 "'"`vfstofs -u "$IN"`"'" "'"`vfstofs -u "$IN"`"'")))) (file-png-save 1 img (car (gimp-image-active-drawable img)) "'$OUT'" "'$OUT'" 1 9 1 0 0 1 1))' '(gimp-quit 0)'
++/usr/bin/gimp-2.3 --no-data --no-interface --batch '(let* ((img (car (gimp-file-load 1 "'"`vfstofs -u "$IN"`"'" "'"`vfstofs -u "$IN"`"'")))) (file-png-save 1 img (car (gimp-image-active-drawable img)) "'$OUT'" "'$OUT'" 1 9 1 0 0 1 1))' '(gimp-quit 0)'
