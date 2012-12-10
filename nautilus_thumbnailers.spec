@@ -58,3 +58,59 @@ rm -rf $RPM_BUILD_ROOT
 %{_bindir}/gs-thumbnailer
 %{_bindir}/vfstofs
 %{_mandir}//man1/nautilus_thumbnailers.1*
+
+
+%changelog
+* Mon Jul 25 2011 GÃ¶tz Waschk <waschk@mandriva.org> 0.0.3-8mdv2012.0
++ Revision: 691512
+- rebuild
+
+* Fri Dec 21 2007 Olivier Blin <oblin@mandriva.com> 0.0.3-7mdv2011.0
++ Revision: 136618
+- restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+
+* Wed Aug 01 2007 GÃ¶tz Waschk <waschk@mandriva.org> 0.0.3-7mdv2008.0
++ Revision: 57440
+- spec fixes
+- Import nautilus_thumbnailers
+
+
+
+* Mon Jul 31 2006 GÃ¶tz Waschk <waschk@mandriva.org> 0.0.3-1mdv2007.0
+- Rebuild
+
+* Thu Dec  8 2005 Götz Waschk <waschk@mandriva.org> 0.0.3-6mdk
+- replace prereq
+- update patch for gimp 2.3
+- mkrel
+
+* Tue Dec  7 2004 Götz Waschk <waschk@linux-mandrake.com> 0.0.3-5mdk
+- use gimp2_2
+
+* Wed Oct  6 2004 Götz Waschk <waschk@linux-mandrake.com> 0.0.3-4mdk
+- oops, gimp2_0
+
+* Tue Oct  5 2004 Götz Waschk <waschk@linux-mandrake.com> 0.0.3-3mdk
+- use gimp 2.0 (Laurent Mouillart)
+
+* Wed Apr 21 2004 Götz Waschk <waschk@linux-mandrake.com> 0.0.3-2mdk
+- build fix
+
+* Sun Nov  9 2003 Götz Waschk <waschk@linux-mandrake.com> 0.0.3-1mdk
+- add abiword thumbnailer
+- new version
+
+* Mon Oct 27 2003 Götz Waschk <waschk@linux-mandrake.com> 0.0.2-2mdk
+- fix buildrequires
+
+* Mon Oct 27 2003 Götz Waschk <waschk@linux-mandrake.com> 0.0.2-1mdk
+- new version
+
+* Tue Sep  2 2003 Götz Waschk <waschk@linux-mandrake.com> 0.0.1-2mdk
+- fix schema uninstallation
+
+* Mon Sep  1 2003 Götz Waschk <waschk@linux-mandrake.com> 0.0.1-1mdk
+- initial package
