@@ -1,14 +1,11 @@
-%define rel 8
-
 Summary: A collection of scripts that create thumbnails for files
 Name: nautilus_thumbnailers
 Version: 0.0.3
-Release: %mkrel %rel
+Release: 9
 License: GPL
 Group: File tools
 Source: http://www.flyn.org/projects/nautilus_thumbnailers/%name.tar.bz2
 Patch: nautilus_thumbnailers-0.0.3-with-gimp-2.3.patch
-BuildRoot: %{_tmppath}/%{name}-%{version}-root
 URL: http://www.flyn.org/projects/nautilus_thumbnailers/index.html
 BuildArch: noarch
 Requires: nautilus
@@ -36,20 +33,12 @@ technique to formats like PDF, PostScript and GIMP XCF.
 %make
 
 %install
-rm -rf %buildroot
 %makeinstall
-
-%clean
-rm -rf $RPM_BUILD_ROOT
-
-%post
-%post_install_gconf_schemas thumbnailer
 
 %preun
 %preun_uninstall_gconf_schemas thumbnailer
 
 %files
-%defattr(-, root, root)
 %doc AUTHORS ChangeLog NEWS README TODO
 %{_sysconfdir}/gconf/schemas/thumbnailer.schemas
 %{_bindir}/abiword-thumbnailer
