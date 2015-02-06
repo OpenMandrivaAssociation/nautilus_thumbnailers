@@ -1,7 +1,7 @@
 Summary: A collection of scripts that create thumbnails for files
 Name: nautilus_thumbnailers
 Version: 0.0.3
-Release: 9
+Release: 10
 License: GPL
 Group: File tools
 Source: http://www.flyn.org/projects/nautilus_thumbnailers/%name.tar.bz2
